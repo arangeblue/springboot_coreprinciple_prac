@@ -23,7 +23,7 @@ public class ApplicationContextExtendsFindTest {
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
 
 
-    @Configuration
+    // @Configuration
     static class TestConfig {
 
         @Bean

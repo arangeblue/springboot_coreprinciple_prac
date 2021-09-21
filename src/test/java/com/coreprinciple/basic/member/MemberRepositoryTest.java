@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
     
 public class MemberRepositoryTest {
     
-    private  MemberService memberService = new MemberServiceImpl();
+    private MemberService memberService;
 
     @Test
     public void 저장_및_조회() {

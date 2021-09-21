@@ -10,9 +10,8 @@ import org.junit.jupiter.api.Test;
     
 public class OrderServiceImplTest {
 
-    private MemberService memberService = new MemberServiceImpl();
-    private OrderService orderService = new OrderServiceImpl();
-
+    private MemberService memberService;
+    private OrderService orderService; 
 
     @BeforeEach
     public void clear() {

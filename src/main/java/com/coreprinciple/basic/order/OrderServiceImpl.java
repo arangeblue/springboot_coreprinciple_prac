@@ -1,20 +1,26 @@
 package com.coreprinciple.basic.order;
 
 import com.coreprinciple.basic.discount.DiscountPolicy;
-import com.coreprinciple.basic.discount.FixDiscountPolicy;
+import com.coreprinciple.basic.discount.MainDiscountPolicy;
 import com.coreprinciple.basic.member.Member;
 import com.coreprinciple.basic.member.MemberRepository;
-import com.coreprinciple.basic.member.MemoryMemberRepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;    
     private final DiscountPolicy discountPolicy;
     
-        public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-            this.memberRepository = memberRepository;
-            this.discountPolicy = discountPolicy;
-        }
+
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
     
     
 
